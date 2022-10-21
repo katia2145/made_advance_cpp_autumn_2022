@@ -1,0 +1,4 @@
+/home/code/made_advance_cpp_autumn_2022/1_homework/roads_copy/src/builds/CMakeFiles/ReadCsv.dir
+/home/code/made_advance_cpp_autumn_2022/1_homework/roads_copy/src/builds/CMakeFiles/main.dir
+/home/code/made_advance_cpp_autumn_2022/1_homework/roads_copy/src/builds/CMakeFiles/edit_cache.dir
+/home/code/made_advance_cpp_autumn_2022/1_homework/roads_copy/src/builds/CMakeFiles/rebuild_cache.dir
