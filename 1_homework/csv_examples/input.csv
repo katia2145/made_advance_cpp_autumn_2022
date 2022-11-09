@@ -1,0 +1,11 @@
+type,length,quality,number_of_lanes
+abc,5,133,10123
+abc,5,3,1
+abc,5,3,109
+abc,5,3,10
+n,5,4,10
+n,5,3,10
+abc,5,5,10
+abc,5,5,10
+abc,5,3,10
+abc,5,3,1011

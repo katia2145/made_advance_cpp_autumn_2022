@@ -1,0 +1,2 @@
+/usr/bin/ar qc libReadCsv.a CMakeFiles/ReadCsv.dir/ReadCsv.c.o
+/usr/bin/ranlib libReadCsv.a
