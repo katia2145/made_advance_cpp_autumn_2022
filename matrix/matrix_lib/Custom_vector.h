@@ -34,6 +34,12 @@ public:
 
     Custom_vector operator=(initializer_list<double> vect);
 
+    Custom_vector operator+(Custom_vector vect);
+
+    Custom_vector operator-(Custom_vector vect);
+
+    Custom_vector operator*(Custom_vector vect);
+
     double &operator()(int i);
 
     double &operator()(int i, int j);
