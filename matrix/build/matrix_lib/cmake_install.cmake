@@ -1,4 +1,4 @@
-# Install script for directory: /home/code/made_advance_cpp_autumn_2022/matrix/matrix_lib
+# Install script for directory: /usr/made/made_advance_cpp_autumn_2022/matrix/matrix_lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

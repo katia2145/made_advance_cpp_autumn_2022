@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/matrix_lib.dir/Custom_vector.cpp.o"
-  "CMakeFiles/matrix_lib.dir/Custom_vector.cpp.o.d"
   "CMakeFiles/matrix_lib.dir/Matrix.cpp.o"
-  "CMakeFiles/matrix_lib.dir/Matrix.cpp.o.d"
   "libmatrix_lib.a"
   "libmatrix_lib.pdb"
 )

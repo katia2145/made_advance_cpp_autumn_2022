@@ -12,7 +12,7 @@
 # set(MATRIX_LIB_LIBRARIES ${PROJECT_NAME} PARENT_SCOPE)
 # set(MATRIX_LIB_INCLUDE_DIRS ${INCLUDE_DIRS} PARENT_SCOPE)
 
-cmake_minimum_required(VERSION 3.22.1)
+cmake_minimum_required(VERSION 3.18.4)
 project(matrix_lib)
 
 # set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} "-fprofile-arcs -ftest-coverage -fPIC -O0")

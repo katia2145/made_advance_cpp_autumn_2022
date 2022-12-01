@@ -14,7 +14,7 @@
 
 # add_subdirectory(tests)
 
-cmake_minimum_required(VERSION 3.22.1)
+cmake_minimum_required(VERSION 3.18.4)
 project(matrix)
 
 add_subdirectory(matrix_lib)

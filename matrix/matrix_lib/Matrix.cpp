@@ -25,12 +25,13 @@ double* Matrix::get_column(int j){
     
     double res[this->cnt_rows];
     for(int i = 0; i < this->cnt_rows; ++i){
+        // cout << this->matrix[i][j] << endl;
         res[i] = this->matrix[i][j];
     }
     return res;
 }
 
-double*  Matrix::get_diagonal(string diag_type = "main"){
+double* Matrix::get_diagonal(string diag_type){
     if(this->cnt_rows != this->cnt_columns){
         throw invalid_argument("the number of rows must be equal to the number of columns");
     }

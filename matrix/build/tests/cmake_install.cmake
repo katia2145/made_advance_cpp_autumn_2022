@@ -1,4 +1,4 @@
-# Install script for directory: /home/code/made_advance_cpp_autumn_2022/matrix/tests
+# Install script for directory: /usr/made/made_advance_cpp_autumn_2022/matrix/tests
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

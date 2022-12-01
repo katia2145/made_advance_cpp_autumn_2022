@@ -1,4 +1,4 @@
-# Install script for directory: /home/code/made_advance_cpp_autumn_2022/matrix
+# Install script for directory: /usr/made/made_advance_cpp_autumn_2022/matrix
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,12 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/code/made_advance_cpp_autumn_2022/matrix/build/matrix_lib/cmake_install.cmake")
+  include("/usr/made/made_advance_cpp_autumn_2022/matrix/build/matrix_lib/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/code/made_advance_cpp_autumn_2022/matrix/build/tests/cmake_install.cmake")
+  include("/usr/made/made_advance_cpp_autumn_2022/matrix/build/tests/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -60,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/code/made_advance_cpp_autumn_2022/matrix/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/usr/made/made_advance_cpp_autumn_2022/matrix/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

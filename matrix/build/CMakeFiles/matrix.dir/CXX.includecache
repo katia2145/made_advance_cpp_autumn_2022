@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/usr/made/made_advance_cpp_autumn_2022/matrix/main.cpp
+matrix_lib/Matrix.h
+/usr/made/made_advance_cpp_autumn_2022/matrix/matrix_lib/Matrix.h
+bits/stdc++.h
+-
+
+/usr/made/made_advance_cpp_autumn_2022/matrix/matrix_lib/Custom_vector.h
+stdexcept
+-
+
+/usr/made/made_advance_cpp_autumn_2022/matrix/matrix_lib/Matrix.h
+Custom_vector.h
+/usr/made/made_advance_cpp_autumn_2022/matrix/matrix_lib/Custom_vector.h
+
