@@ -64,7 +64,7 @@ TEST(MATRIX, TestInicialization)
     },
                  invalid_argument);
 
-    v1.transpouse();
+    v1 = v1.transpouse();
     Custom_vector v_err1[] = {v1, v2};
     EXPECT_THROW({
         try
@@ -79,7 +79,7 @@ TEST(MATRIX, TestInicialization)
     },
                  invalid_argument);
 
-    v2.transpouse();
+    v2 = v2.transpouse();
 
     Custom_vector v_col[] = {v1, v2};
     m = Matrix(v_col, 3, 2);

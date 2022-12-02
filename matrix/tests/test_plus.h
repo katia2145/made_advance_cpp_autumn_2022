@@ -21,7 +21,7 @@ TEST(VECTOR, TestPlusVector)
         EXPECT_DOUBLE_EQ(result[i], res(i));
     }
 
-    v1.transpouse();
+    v1 = v1.transpouse();
 
     EXPECT_THROW({
         try
@@ -36,7 +36,7 @@ TEST(VECTOR, TestPlusVector)
     },
                  invalid_argument);
 
-    v2.transpouse();
+    v2 = v2.transpouse();
     res = v1 + v2;
     EXPECT_EQ(res.cnt_columns, 1);
     EXPECT_EQ(res.cnt_rows, 4);
@@ -75,7 +75,7 @@ TEST(VECTOR, TestPlusNumber)
         EXPECT_DOUBLE_EQ(result[i], res(i));
     }
 
-    v1.transpouse();
+    v1 = v1.transpouse();
     res = v1 + 3;
     EXPECT_EQ(res.cnt_columns, 1);
     EXPECT_EQ(res.cnt_rows, 4);
@@ -92,6 +92,93 @@ TEST(VECTOR, TestPlusNumber)
         EXPECT_DOUBLE_EQ(result[i], res(i));
     }
 }
+
+TEST(VECTOR, TestPlusMatrix)
+{
+    Custom_vector v;
+    v = {1, 2, 3, 4};
+
+    Matrix m;
+    m = {{1, 2, 3, 4},
+        {1, 2, 3, 4},
+        {1, 2, 3, 4},
+        {1, 2, 3, 4}};
+
+    double result[4][4] = {2, 4, 6, 8, 2, 4, 6, 8,
+                           2, 4, 6, 8, 2, 4, 6, 8};
+
+    Matrix res;
+    res = v.add(m, "row");
+    EXPECT_EQ(res.cnt_columns, 4);
+    EXPECT_EQ(res.cnt_rows, 4);
+    for (int i = 0; i < 4; ++i)
+    {
+        for(int j = 0; j < 4; ++j){
+            EXPECT_DOUBLE_EQ(result[i][j], res(i, j));
+        }
+    }
+
+    res = m.add(v, "row");
+    EXPECT_EQ(res.cnt_columns, 4);
+    EXPECT_EQ(res.cnt_rows, 4);
+    for (int i = 0; i < 4; ++i)
+    {
+        for(int j = 0; j < 4; ++j){
+            EXPECT_DOUBLE_EQ(result[i][j], res(i, j));
+        }
+    }
+
+    res = v.add(m, "column");
+    double result1[4][4] = {2, 3, 4, 5, 3, 4, 5, 6,
+                           4, 5, 6, 7, 5, 6, 7, 8};
+
+    EXPECT_EQ(res.cnt_columns, 4);
+    EXPECT_EQ(res.cnt_rows, 4);
+    for (int i = 0; i < 4; ++i)
+    {
+        for(int j = 0; j < 4; ++j){
+            EXPECT_DOUBLE_EQ(result1[i][j], res(i, j));
+        }
+    }
+
+    res = m.add(v, "column");
+    EXPECT_EQ(res.cnt_columns, 4);
+    EXPECT_EQ(res.cnt_rows, 4);
+    for (int i = 0; i < 4; ++i)
+    {
+        for(int j = 0; j < 4; ++j){
+            EXPECT_DOUBLE_EQ(result1[i][j], res(i, j));
+        }
+    }
+
+    v = {1, 2};
+    EXPECT_THROW({
+        try
+        {
+            res = v.add(m, "row");
+        }
+        catch (const invalid_argument &e)
+        {
+            EXPECT_STREQ("vector and matrix must have same cnt_columns", e.what());
+            throw;
+        }
+    },
+                 invalid_argument); 
+ 
+    EXPECT_THROW({
+        try
+        {
+            res = v.add(m, "column");
+        }
+        catch (const invalid_argument &e)
+        {
+            EXPECT_STREQ("vector and matrix must have same cnt_rows", e.what());
+            throw;
+        }
+    },
+                 invalid_argument);    
+}
+
 
 TEST(MATRIX, TestPlusMatrix)
 {

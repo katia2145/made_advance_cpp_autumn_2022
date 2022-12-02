@@ -69,6 +69,37 @@ Matrix operator+(int const &num, Matrix mtx)
     return mtx + (double)num;
 }
 
+Matrix Matrix::add(Custom_vector vect, string addition_type){
+    if(addition_type == "row"){
+        if(vect.cnt_columns != this->cnt_columns){
+            throw invalid_argument("vector and matrix must have same cnt_columns");
+        }
+        Matrix m = Matrix(this->cnt_rows, this->cnt_columns);  
+        for(int i = 0; i < this->cnt_rows; ++i){
+            for(int j = 0; j < this->cnt_columns; ++j){
+                m.matrix[i][j] = this->matrix[i][j] + vect(j);
+            }
+        }
+        return m;
+    }
+    else if(addition_type == "column"){
+        if(vect.cnt_columns != this->cnt_columns){
+            throw invalid_argument("vector and matrix must have same cnt_rows");
+        }
+        Matrix m = Matrix(this->cnt_rows, this->cnt_columns);
+        for(int i = 0; i < this->cnt_rows; ++i){
+            for(int j = 0; j < this->cnt_columns; ++j){
+                m.matrix[i][j] = this->matrix[i][j] + vect(i);
+            }
+        }
+        return m;
+    }
+    else{
+        throw invalid_argument("no such type of addition, choose: row or column");
+    }
+}
+
+
 Matrix Matrix::operator-(Matrix mtx)
 {
     if (this->cnt_rows != mtx.cnt_rows || this->cnt_columns != mtx.cnt_columns)
@@ -272,4 +303,15 @@ double *Matrix::get_diagonal(string diag_type)
         }
     }
     return res;
+}
+
+
+Matrix Matrix::transpouse(){
+    Matrix m = Matrix(this->cnt_columns, this->cnt_rows);
+    for(int i = 0; i < this->cnt_columns; ++i){
+        for(int j = 0; j < this->cnt_rows; ++j){
+            m.matrix[i][j] = this->matrix[j][i];
+        }
+    }
+    return m;
 }

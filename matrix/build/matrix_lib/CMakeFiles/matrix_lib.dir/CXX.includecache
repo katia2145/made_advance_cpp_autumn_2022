@@ -14,6 +14,12 @@ stdexcept
 bits/stdc++.h
 -
 
+/usr/made/made_advance_cpp_autumn_2022/matrix/matrix_lib/Matrix.cpp
+lib.h
+/usr/made/made_advance_cpp_autumn_2022/matrix/matrix_lib/lib.h
+bits/stdc++.h
+-
+
 /usr/made/made_advance_cpp_autumn_2022/matrix/matrix_lib/lib.h
 stdexcept
 -

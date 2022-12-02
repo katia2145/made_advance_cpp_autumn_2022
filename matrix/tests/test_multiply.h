@@ -19,7 +19,7 @@ TEST(VECTOR, TestMultiply)
         EXPECT_DOUBLE_EQ(result[i], res(i));
     }
 
-    v1.transpouse();
+    v1 = v1.transpouse();
 
     EXPECT_THROW({
         try
@@ -34,7 +34,7 @@ TEST(VECTOR, TestMultiply)
     },
                  invalid_argument);
 
-    v2.transpouse();
+    v2 = v2.transpouse();
     res = v1 * v2;
     for (int i = 0; i < 4; ++i)
     {
@@ -164,7 +164,7 @@ TEST(MATRIX, TestMultiplyByVector)
     },
                  invalid_argument);
 
-    v.transpouse();
+    v = v.transpouse();
     double result1[3][1] = {9, 12, 15};
     res = m1 * v;
     for (int i = 0; i < 3; ++i)
@@ -176,7 +176,7 @@ TEST(MATRIX, TestMultiplyByVector)
     // cout << "ok\n";
     // m1 = {{1, 2, 3}};
     // v = {1, 2, 3};
-    // v.transpouse();
+    // v = v.transpouse();
     // double result2[3][3] = {1, 2, 3, 2, 4, 6, 3, 6, 9};
     // res = v * m1;
     // for (int i = 0; i < 3; ++i)

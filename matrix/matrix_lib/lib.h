@@ -49,6 +49,8 @@ public:
 
     friend Custom_vector operator+(int const &num, Custom_vector mtx);
 
+    Matrix add(Matrix mtx, string addition_type);
+
     Custom_vector operator-(Custom_vector vect);
 
     Custom_vector operator-(double num);
@@ -160,6 +162,8 @@ public:
 
     friend Matrix operator+(int const &num, Matrix mtx);
 
+    Matrix add(Custom_vector vect, string addition_type);
+
     Matrix operator-(Matrix mtx);
 
     Matrix operator-(double num);
@@ -189,6 +193,8 @@ public:
     double *get_column(int j);
 
     double *get_diagonal(string diag_type = "main");
+
+    Matrix transpouse();
 };
 
 #endif

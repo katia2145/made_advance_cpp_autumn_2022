@@ -59,6 +59,36 @@ Custom_vector operator+(int const &num, Custom_vector vect)
     return (vect + (double)num);
 }
 
+Matrix Custom_vector::add(Matrix mtx, string addition_type){
+    if(addition_type == "row"){
+        if(this->cnt_columns != mtx.cnt_columns){
+            throw invalid_argument("vector and matrix must have same cnt_columns");
+        }
+        Matrix m = Matrix(mtx.cnt_rows, mtx.cnt_columns);  
+        for(int i = 0; i < mtx.cnt_rows; ++i){
+            for(int j = 0; j < mtx.cnt_columns; ++j){
+                m.matrix[i][j] = mtx(i, j) + this->array[j];
+            }
+        }
+        return m;
+    }
+    else if(addition_type == "column"){
+        if(this->cnt_columns != mtx.cnt_columns){
+            throw invalid_argument("vector and matrix must have same cnt_rows");
+        }
+        Matrix m = Matrix(mtx.cnt_rows, mtx.cnt_columns);
+        for(int i = 0; i < mtx.cnt_rows; ++i){
+            for(int j = 0; j < mtx.cnt_columns; ++j){
+                m.matrix[i][j] = mtx(i, j) + this->array[i];
+            }
+        }
+        return m;
+    }
+    else{
+        throw invalid_argument("no such type of addition, choose: row or column");
+    }
+}
+
 Custom_vector Custom_vector::operator-(Custom_vector vect)
 {
     if (this->cnt_rows != vect.cnt_rows || this->cnt_columns != vect.cnt_columns)
@@ -186,7 +216,7 @@ double *Custom_vector::get_row_column(int i, int cnt)
 
 Custom_vector Custom_vector::transpouse()
 {
-    int cnt_columns = this->cnt_columns;
-    this->cnt_columns = this->cnt_rows;
-    this->cnt_rows = cnt_columns;
+    Custom_vector v = Custom_vector(this->cnt_columns, this->cnt_rows);
+    v.array = this->array;
+    return v;
 }

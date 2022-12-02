@@ -48,7 +48,7 @@ TEST(VECTOR, TestGetRow)
 {
     Custom_vector v;
     v = {1, 2, 3, 4};
-    v.transpouse();
+    v = v.transpouse();
     double result[] = {1, 2, 3, 4};
 
     for(int i = 0; i < 4; ++i){

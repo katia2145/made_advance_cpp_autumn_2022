@@ -19,7 +19,7 @@ TEST(VECTOR, TestMinusVector)
         EXPECT_DOUBLE_EQ(result[i], res(i));
     }
 
-    v1.transpouse();
+    v1 = v1.transpouse();
 
     EXPECT_THROW({
         try
@@ -34,7 +34,7 @@ TEST(VECTOR, TestMinusVector)
     },
                  invalid_argument);
 
-    v2.transpouse();
+    v2 = v2.transpouse();
     res = v1 - v2;
     for (int i = 0; i < 4; ++i)
     {
@@ -71,7 +71,7 @@ TEST(VECTOR, TestMinusNumber)
         EXPECT_DOUBLE_EQ(result[i], res(i));
     }
 
-    v1.transpouse();
+    v1 = v1.transpouse();
     res = v1 - 1;
     EXPECT_EQ(res.cnt_columns, 1);
     EXPECT_EQ(res.cnt_rows, 4);

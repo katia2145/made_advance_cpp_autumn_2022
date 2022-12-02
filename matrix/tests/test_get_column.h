@@ -48,7 +48,7 @@ TEST(VECTOR, TestGetColumn)
 {
     Custom_vector v;
     v = {1, 2, 3, 4};
-    v.transpouse();
+    v = v.transpouse();
     double result[] = {1, 2, 3, 4};
 
     auto res = v.get_column(0);
