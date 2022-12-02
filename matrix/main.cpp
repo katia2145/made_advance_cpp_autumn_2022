@@ -1,4 +1,4 @@
-#include "matrix_lib/Matrix.h"
+#include "matrix_lib/lib.h"
 
 #include <bits/stdc++.h>
 using namespace std;

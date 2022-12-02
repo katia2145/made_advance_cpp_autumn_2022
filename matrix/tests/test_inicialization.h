@@ -2,8 +2,7 @@
 
 extern "C++"
 {
-#include "../matrix_lib/Matrix.h"
-#include "../matrix_lib/Custom_vector.h"
+#include "../matrix_lib/lib.h"
 }
 
 TEST(MATRIX, TestInicialization)

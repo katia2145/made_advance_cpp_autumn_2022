@@ -1,5 +1,4 @@
-#include "Matrix.h"
-#include "Custom_vector.h"
+#include "lib.h"
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -47,6 +46,29 @@ Matrix Matrix::operator+(Matrix mtx)
     return m;
 }
 
+Matrix Matrix::operator+(double num)
+{
+    Matrix m = Matrix(this->cnt_rows, this->cnt_columns);
+    for (int i = 0; i < this->cnt_rows; ++i)
+    {
+        for (int j = 0; j < this->cnt_columns; ++j)
+        {
+            m.matrix[i][j] = this->matrix[i][j] + num;
+        }
+    }
+    return m;
+}
+
+Matrix operator+(double const &num, Matrix mtx)
+{
+    return mtx + num;
+}
+
+Matrix operator+(int const &num, Matrix mtx)
+{
+    return mtx + (double)num;
+}
+
 Matrix Matrix::operator-(Matrix mtx)
 {
     if (this->cnt_rows != mtx.cnt_rows || this->cnt_columns != mtx.cnt_columns)
@@ -60,6 +82,29 @@ Matrix Matrix::operator-(Matrix mtx)
         for (int j = 0; j < this->cnt_columns; ++j)
         {
             m.matrix[i][j] = this->matrix[i][j] - mtx(i, j);
+        }
+    }
+    return m;
+}
+
+Matrix operator-(double const &num, Matrix mtx)
+{
+    return mtx* (-1) + num;
+}
+
+Matrix operator-(int const &num, Matrix mtx)
+{
+    return mtx * (-1) + (double)num;
+}
+
+Matrix Matrix::operator-(double num)
+{
+    Matrix m = Matrix(this->cnt_rows, this->cnt_columns);
+    for (int i = 0; i < this->cnt_rows; ++i)
+    {
+        for (int j = 0; j < this->cnt_columns; ++j)
+        {
+            m.matrix[i][j] = this->matrix[i][j] - num;
         }
     }
     return m;
@@ -83,6 +128,48 @@ Matrix Matrix::operator*(Matrix mtx)
     return m;
 }
 
+Matrix Matrix::operator*(Custom_vector vect)
+{
+    if (this->cnt_columns != vect.cnt_rows)
+        throw invalid_argument("vector cnt_columns must be equal matrix cnt_rows");
+
+    Matrix m = Matrix(this->cnt_rows, vect.cnt_columns);
+
+    for (int row = 0; row < this->cnt_rows; ++row)
+    {
+        for (int col = 0; col < vect.cnt_columns; ++col)
+        {
+            for (int i = 0; i < this->cnt_columns; ++i)
+            {
+                m.matrix[row][col] += this->matrix[row][i] * vect(i);
+            }
+        }
+    }
+
+    return m;
+}
+
+Matrix Matrix::operator&(Matrix mtx)
+{
+    if (this->cnt_columns != mtx.cnt_rows)
+        throw invalid_argument("matrix must be same dimentions");
+
+    Matrix m = Matrix(this->cnt_rows, mtx.cnt_columns);
+
+    for (int row = 0; row < this->cnt_rows; ++row)
+    {
+        for (int col = 0; col < mtx.cnt_columns; ++col)
+        {
+            for (int i = 0; i < this->cnt_columns; ++i)
+            {
+                m.matrix[row][col] += this->matrix[row][i] * mtx(i, col);
+            }
+        }
+    }
+
+    return m;
+}
+
 Matrix Matrix::operator*(double num)
 {
     Matrix m = Matrix(this->cnt_rows, this->cnt_columns);
@@ -96,6 +183,41 @@ Matrix Matrix::operator*(double num)
     }
 
     return m;
+}
+
+Matrix Matrix::operator*(int num)
+{
+    Matrix m = Matrix(this->cnt_rows, this->cnt_columns);
+
+    for (int i = 0; i < this->cnt_rows; ++i)
+    {
+        for (int j = 0; j < this->cnt_columns; ++j)
+        {
+            m.matrix[i][j] = this->matrix[i][j] * num;
+        }
+    }
+
+    return m;
+}
+
+Matrix operator*(double const &num, Matrix mtx)
+{
+    Matrix m = Matrix(mtx.cnt_rows, mtx.cnt_columns);
+
+    for (int i = 0; i < mtx.cnt_rows; ++i)
+    {
+        for (int j = 0; j < mtx.cnt_columns; ++j)
+        {
+            m.matrix[i][j] = mtx.matrix[i][j] * num;
+        }
+    }
+
+    return m;
+}
+
+Matrix operator*(int const &num, Matrix mtx)
+{
+    return mtx * num;
 }
 
 double *Matrix::get_row(int i)
@@ -150,46 +272,4 @@ double *Matrix::get_diagonal(string diag_type)
         }
     }
     return res;
-}
-
-// inline Matrix operator*(Matrix mtx, double num)
-// {
-//     return num * mtx;
-//     // Matrix m = Matrix(mtx.cnt_rows, mtx.cnt_columns);
-
-//     // for (int i = 0; i < mtx.cnt_rows; ++i)
-//     // {
-//     //     for (int j = 0; j < mtx.cnt_columns; ++j)
-//     //     {
-//     //         m.matrix[i][j] = mtx(i, j) * num;
-//     //     }
-//     // }
-
-//     // return m;
-// }
-
-inline Custom_vector operator*(Custom_vector vect, Matrix mtx)
-{
-    if (vect.cnt_columns != mtx.cnt_rows)
-    {
-        throw invalid_argument("vector cnt_columns must be equal matrix cnt_rows");
-    }
-
-    Custom_vector v;
-    if (vect.cnt_columns != 1)
-        v = Custom_vector(1, mtx.cnt_columns);
-    else
-        v = Custom_vector(mtx.cnt_columns, 1);
-
-    for (int row = 0; row < vect.cnt_rows; ++row)
-    {
-        double cur_sum = 0;
-        for (int i = 0; i < vect.cnt_columns; ++i)
-        {
-            cur_sum += vect(i) * mtx(i, row);
-        }
-        v.array[row] = cur_sum;
-    }
-
-    return v;
 }

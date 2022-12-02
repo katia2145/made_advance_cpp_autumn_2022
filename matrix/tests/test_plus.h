@@ -2,11 +2,10 @@
 
 extern "C++"
 {
-#include "../matrix_lib/Matrix.h"
-#include "../matrix_lib/Custom_vector.h"
+#include "../matrix_lib/lib.h"
 }
 
-TEST(VECTOR, TestPlus)
+TEST(VECTOR, TestPlusVector)
 {
     Custom_vector v1, v2;
     v1 = {1, 2, 3, 4};
@@ -15,6 +14,8 @@ TEST(VECTOR, TestPlus)
 
     Custom_vector res;
     res = v1 + v2;
+    EXPECT_EQ(res.cnt_columns, 4);
+    EXPECT_EQ(res.cnt_rows, 1);
     for (int i = 0; i < 4; ++i)
     {
         EXPECT_DOUBLE_EQ(result[i], res(i));
@@ -37,6 +38,8 @@ TEST(VECTOR, TestPlus)
 
     v2.transpouse();
     res = v1 + v2;
+    EXPECT_EQ(res.cnt_columns, 1);
+    EXPECT_EQ(res.cnt_rows, 4);
     for (int i = 0; i < 4; ++i)
     {
         EXPECT_DOUBLE_EQ(result[i], res(i));
@@ -57,39 +60,111 @@ TEST(VECTOR, TestPlus)
                  invalid_argument);
 }
 
-TEST(MATRIX, TestPlus)
+TEST(VECTOR, TestPlusNumber)
 {
-        Matrix m1;
-        m1 = {
-            {1, 2, 3},
-            {4, 5, 6}
-        };
-        double result[2][3] = {2, 4, 6, 8, 10, 12};
+    Custom_vector v1, v2;
+    v1 = {1, 2, 3, 4};
+    double result[] = {4, 5, 6, 7};
+    Custom_vector res;
+    res = v1 + 3;
 
-        Matrix res;
-        res = m1 + m1;
-        for(int i = 0; i < 2; ++i){
-            for(int j = 0; j < 3; ++j)
-                EXPECT_DOUBLE_EQ(result[i][j], res(i, j));
+    EXPECT_EQ(res.cnt_columns, 4);
+    EXPECT_EQ(res.cnt_rows, 1);
+    for (int i = 0; i < 4; ++i)
+    {
+        EXPECT_DOUBLE_EQ(result[i], res(i));
+    }
+
+    v1.transpouse();
+    res = v1 + 3;
+    EXPECT_EQ(res.cnt_columns, 1);
+    EXPECT_EQ(res.cnt_rows, 4);
+    for (int i = 0; i < 4; ++i)
+    {
+        EXPECT_DOUBLE_EQ(result[i], res(i));
+    }
+
+    res = 3 + v1;
+    EXPECT_EQ(res.cnt_columns, 1);
+    EXPECT_EQ(res.cnt_rows, 4);
+    for (int i = 0; i < 4; ++i)
+    {
+        EXPECT_DOUBLE_EQ(result[i], res(i));
+    }
+}
+
+TEST(MATRIX, TestPlusMatrix)
+{
+    Matrix m1;
+    m1 = {
+        {1, 2, 3},
+        {4, 5, 6}};
+    double result[2][3] = {2, 4, 6, 8, 10, 12};
+
+    Matrix res;
+    res = m1 + m1;
+    EXPECT_EQ(res.cnt_columns, 3);
+    EXPECT_EQ(res.cnt_rows, 2);
+    for (int i = 0; i < 2; ++i)
+    {
+        for (int j = 0; j < 3; ++j)
+            EXPECT_DOUBLE_EQ(result[i][j], res(i, j));
+    }
+
+    Matrix m2;
+    m2 = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}};
+
+    EXPECT_THROW({
+        try
+        {
+            m1 + m2;
         }
+        catch (const invalid_argument &e)
+        {
+            EXPECT_STREQ("matrix must be same dimentions", e.what());
+            throw;
+        }
+    },
+                 invalid_argument);
+}
 
-        Matrix m2;
-        m2 = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
-        };
+TEST(MATRIX, TestPlusNumber)
+{
+    Matrix m1;
+    m1 = {
+        {1, 2, 3},
+        {4, 5, 6}};
+    double result[2][3] = {4, 5, 6, 7, 8, 9};
 
-        EXPECT_THROW({
-            try
-            {
-                m1 + m2;
-            }
-            catch (const invalid_argument &e)
-            {
-                EXPECT_STREQ("matrix must be same dimentions", e.what());
-                throw;
-            }
-        },
-                     invalid_argument);
+    Matrix res;
+    res = m1 + 3;
+    EXPECT_EQ(res.cnt_columns, 3);
+    EXPECT_EQ(res.cnt_rows, 2);
+    for (int i = 0; i < 2; ++i)
+    {
+        for (int j = 0; j < 3; ++j)
+            EXPECT_DOUBLE_EQ(result[i][j], res(i, j));
+    }
+
+    res = 3 + m1;
+    EXPECT_EQ(res.cnt_columns, 3);
+    EXPECT_EQ(res.cnt_rows, 2);
+    for (int i = 0; i < 2; ++i)
+    {
+        for (int j = 0; j < 3; ++j)
+            EXPECT_DOUBLE_EQ(result[i][j], res(i, j));
+    }
+
+    int cnt = 3;
+    res = cnt + m1;
+    EXPECT_EQ(res.cnt_columns, 3);
+    EXPECT_EQ(res.cnt_rows, 2);
+    for (int i = 0; i < 2; ++i)
+    {
+        for (int j = 0; j < 3; ++j)
+            EXPECT_DOUBLE_EQ(result[i][j], res(i, j));
+    }
 }

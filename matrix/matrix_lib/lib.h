@@ -1,10 +1,81 @@
-#include "Custom_vector.h"
-
-#include <bits/stdc++.h>
+#include <stdexcept>
 using namespace std;
 
-#ifndef MATRIX_H
-#define MATRIX_H
+#ifndef LIB_VECTOR_H
+#define LIB_VECTOR_H
+
+class Custom_vector;
+class Matrix;
+
+inline Matrix operator*(double num, Matrix mtx);
+
+inline Matrix operator*(Matrix mtx, double num);
+
+class Custom_vector
+{
+public:
+    int cnt_rows;
+    int cnt_columns;
+    double *array;
+
+    Custom_vector(int cnt_rows = 1, int cnt_columns = 3)
+    {
+        if (cnt_columns < 1 || cnt_rows < 1)
+        {
+            throw invalid_argument("size must be > 0");
+        }
+        if (cnt_columns != 1 && cnt_rows != 1)
+        {
+            throw invalid_argument("count columns or rows must be 1");
+        }
+        this->cnt_columns = cnt_columns;
+        this->cnt_rows = cnt_rows;
+        int n = max(cnt_rows, cnt_columns);
+        this->array = new double[n];
+
+        for (int i = 0; i < n; ++i)
+        {
+            this->array[i] = 0.0;
+        }
+    }
+
+    Custom_vector operator=(initializer_list<double> vect);
+
+    Custom_vector operator+(Custom_vector vect);
+
+    Custom_vector operator+(double num);
+
+    friend Custom_vector operator+(double const &num, Custom_vector mtx);
+
+    friend Custom_vector operator+(int const &num, Custom_vector mtx);
+
+    Custom_vector operator-(Custom_vector vect);
+
+    Custom_vector operator-(double num);
+
+    friend Custom_vector operator-(double const &num, Custom_vector mtx);
+
+    friend Custom_vector operator-(int const &num, Custom_vector mtx);
+
+    Custom_vector operator*(Custom_vector vect);
+
+    Matrix operator*(Matrix mtx);
+
+    double &operator()(int i);
+
+    double &operator()(int i, int j);
+
+    double *get_row(int i);
+
+    double *get_column(int j);
+
+    Custom_vector transpouse();
+
+private:
+    double *get_row_column(int i, int cnt);
+};
+
+
 
 class Matrix : public Custom_vector
 {
@@ -83,11 +154,33 @@ public:
 
     Matrix operator+(Matrix mtx);
 
+    Matrix operator+(double num);
+
+    friend Matrix operator+(double const &num, Matrix mtx);
+
+    friend Matrix operator+(int const &num, Matrix mtx);
+
     Matrix operator-(Matrix mtx);
+
+    Matrix operator-(double num);
+
+    friend Matrix operator-(double const &num, Matrix mtx);
+
+    friend Matrix operator-(int const &num, Matrix mtx);
 
     Matrix operator*(Matrix mtx);
 
     Matrix operator*(double num);
+
+    Matrix operator*(int num);
+
+    friend Matrix operator*(double const &num, Matrix mtx);
+
+    friend Matrix operator*(int const &num, Matrix mtx);
+
+    Matrix operator*(Custom_vector vect);
+
+    Matrix operator&(Matrix mtx);
 
     double &operator()(int i, int j);
 
@@ -97,11 +190,5 @@ public:
 
     double *get_diagonal(string diag_type = "main");
 };
-
-// inline Matrix operator*(double num, Matrix mtx);
-
-// inline Matrix operator*(Matrix mtx, double num);
-
-inline Custom_vector operator*(Custom_vector vect, Matrix mtx);
 
 #endif
