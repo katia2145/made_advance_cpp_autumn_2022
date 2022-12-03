@@ -3,6 +3,7 @@
 
 tests/CMakeFiles/matrix_test.dir/test_matrix.cpp.o
  /usr/made/made_advance_cpp_autumn_2022/matrix/matrix_lib/lib.h
+ /usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_determinat.h
  /usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_get_column.h
  /usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_get_diagonal.h
  /usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_get_row.h
@@ -12,3 +13,4 @@ tests/CMakeFiles/matrix_test.dir/test_matrix.cpp.o
  /usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_minus.h
  /usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_multiply.h
  /usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_plus.h
+ /usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_transpouse.h

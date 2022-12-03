@@ -315,3 +315,45 @@ Matrix Matrix::transpouse(){
     }
     return m;
 }
+
+double Matrix::determinat(){
+    if(this->cnt_columns != this->cnt_rows)
+        throw invalid_argument("matrix must be square");
+    
+    if(this->cnt_columns == 2){
+        return this->matrix[0][0] * this->matrix[1][1] - this->matrix[1][0] * this->matrix[0][1];
+    }
+
+    double det = 0;
+
+    for(int col = 0, one = 1; col < this->cnt_columns; ++col){
+        Matrix m = Matrix(this->cnt_rows - 1, this->cnt_columns - 1);
+
+        for(int i = 1, new_i = 0; i < this->cnt_rows; ++i){
+            for(int j = 0, new_j = 0; j < this->cnt_columns; ++j){
+                if(j == col){
+                    continue;
+                }
+                m.matrix[new_i][new_j] = this->matrix[i][j];
+                new_j++;
+            }
+            new_i++;
+        }
+        det += this->matrix[0][col] * one * m.determinat();
+        one *= -1;
+    }
+    return det;
+}
+
+Matrix Matrix::inverse(){
+    // double det = this->determinat();
+
+    // if(det < 1e-7)
+    //     throw invalid_argument("determinat is 0, invers matrix dont exist");
+
+    // det = 1.0 / det;
+
+    // Matrix m = this->transpouse();
+
+    // return m * det;
+}

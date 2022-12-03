@@ -10,6 +10,12 @@
 stdexcept
 -
 
+/usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_determinat.h
+gtest/gtest.h
+-
+../matrix_lib/lib.h
+/usr/made/made_advance_cpp_autumn_2022/matrix/matrix_lib/lib.h
+
 /usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_get_column.h
 gtest/gtest.h
 -
@@ -63,6 +69,10 @@ test_minus.h
 /usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_minus.h
 test_multiply.h
 /usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_multiply.h
+test_transpouse.h
+/usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_transpouse.h
+test_determinat.h
+/usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_determinat.h
 
 /usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_minus.h
 gtest/gtest.h
@@ -77,6 +87,12 @@ gtest/gtest.h
 /usr/made/made_advance_cpp_autumn_2022/matrix/matrix_lib/lib.h
 
 /usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_plus.h
+gtest/gtest.h
+-
+../matrix_lib/lib.h
+/usr/made/made_advance_cpp_autumn_2022/matrix/matrix_lib/lib.h
+
+/usr/made/made_advance_cpp_autumn_2022/matrix/tests/test_transpouse.h
 gtest/gtest.h
 -
 ../matrix_lib/lib.h

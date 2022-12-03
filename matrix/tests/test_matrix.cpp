@@ -13,6 +13,8 @@ extern "C++"
 #include "test_plus.h"
 #include "test_minus.h"
 #include "test_multiply.h"
+#include "test_transpouse.h"
+#include "test_determinat.h"
 
 int main(int argc, char **argv)
 {

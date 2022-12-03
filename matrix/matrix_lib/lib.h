@@ -78,7 +78,6 @@ private:
 };
 
 
-
 class Matrix : public Custom_vector
 {
 public:
@@ -195,6 +194,11 @@ public:
     double *get_diagonal(string diag_type = "main");
 
     Matrix transpouse();
+
+    double determinat();
+
+    Matrix inverse();
 };
+
 
 #endif

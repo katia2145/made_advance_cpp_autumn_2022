@@ -11,16 +11,26 @@ TEST(MATRIX, TestTranspouse)
     m1 = {
         {1, 2, 3},
         {4, 5, 6}};
-    double result[3][2] = {1, 2, 3, 4, 5, 6};
+    double result[3][2] = {1, 4, 2, 5, 3, 6};
 
     Matrix res;
-    res = res.transpouse();
+    res = m1.transpouse();
+    EXPECT_EQ(res.cnt_columns, 2);
+    EXPECT_EQ(res.cnt_rows, 3);
+    for (int i = 0; i < 3; ++i)
+    {
+        for (int j = 0; j < 2; ++j)
+            EXPECT_DOUBLE_EQ(result[i][j], res(i, j));
+    }
+
+    res = res.transpouse();  
+    double result1[2][3] = {1, 2, 3, 4, 5, 6};  
     EXPECT_EQ(res.cnt_columns, 3);
     EXPECT_EQ(res.cnt_rows, 2);
     for (int i = 0; i < 2; ++i)
     {
         for (int j = 0; j < 3; ++j)
-            EXPECT_DOUBLE_EQ(result[i][j], res(i, j));
+            EXPECT_DOUBLE_EQ(result1[i][j], res(i, j));
     }
 }
 
@@ -31,9 +41,9 @@ TEST(VECTOR, TestTranspouse)
     double result[4] = {1, 2, 3, 4};
 
     Custom_vector res = v.transpouse(); 
-    EXPECT_EQ(res.cnt_columns, 4);
-    EXPECT_EQ(res.cnt_rows, 1);
-    for (int i = 0; i < 2; ++i)
+    EXPECT_EQ(res.cnt_columns, 1);
+    EXPECT_EQ(res.cnt_rows, 4);
+    for (int i = 0; i < 4; ++i)
     {
         EXPECT_DOUBLE_EQ(result[i], res(i));
     }
