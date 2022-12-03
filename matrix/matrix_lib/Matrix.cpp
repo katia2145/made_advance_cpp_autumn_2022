@@ -69,36 +69,45 @@ Matrix operator+(int const &num, Matrix mtx)
     return mtx + (double)num;
 }
 
-Matrix Matrix::add(Custom_vector vect, string addition_type){
-    if(addition_type == "row"){
-        if(vect.cnt_columns != this->cnt_columns){
+Matrix Matrix::add(Custom_vector vect, string addition_type)
+{
+    if (addition_type == "row")
+    {
+        if (vect.cnt_columns != this->cnt_columns)
+        {
             throw invalid_argument("vector and matrix must have same cnt_columns");
         }
-        Matrix m = Matrix(this->cnt_rows, this->cnt_columns);  
-        for(int i = 0; i < this->cnt_rows; ++i){
-            for(int j = 0; j < this->cnt_columns; ++j){
+        Matrix m = Matrix(this->cnt_rows, this->cnt_columns);
+        for (int i = 0; i < this->cnt_rows; ++i)
+        {
+            for (int j = 0; j < this->cnt_columns; ++j)
+            {
                 m.matrix[i][j] = this->matrix[i][j] + vect(j);
             }
         }
         return m;
     }
-    else if(addition_type == "column"){
-        if(vect.cnt_columns != this->cnt_columns){
+    else if (addition_type == "column")
+    {
+        if (vect.cnt_columns != this->cnt_columns)
+        {
             throw invalid_argument("vector and matrix must have same cnt_rows");
         }
         Matrix m = Matrix(this->cnt_rows, this->cnt_columns);
-        for(int i = 0; i < this->cnt_rows; ++i){
-            for(int j = 0; j < this->cnt_columns; ++j){
+        for (int i = 0; i < this->cnt_rows; ++i)
+        {
+            for (int j = 0; j < this->cnt_columns; ++j)
+            {
                 m.matrix[i][j] = this->matrix[i][j] + vect(i);
             }
         }
         return m;
     }
-    else{
+    else
+    {
         throw invalid_argument("no such type of addition, choose: row or column");
     }
 }
-
 
 Matrix Matrix::operator-(Matrix mtx)
 {
@@ -120,7 +129,7 @@ Matrix Matrix::operator-(Matrix mtx)
 
 Matrix operator-(double const &num, Matrix mtx)
 {
-    return mtx* (-1) + num;
+    return mtx * (-1) + num;
 }
 
 Matrix operator-(int const &num, Matrix mtx)
@@ -305,33 +314,41 @@ double *Matrix::get_diagonal(string diag_type)
     return res;
 }
 
-
-Matrix Matrix::transpouse(){
+Matrix Matrix::transpouse()
+{
     Matrix m = Matrix(this->cnt_columns, this->cnt_rows);
-    for(int i = 0; i < this->cnt_columns; ++i){
-        for(int j = 0; j < this->cnt_rows; ++j){
+    for (int i = 0; i < this->cnt_columns; ++i)
+    {
+        for (int j = 0; j < this->cnt_rows; ++j)
+        {
             m.matrix[i][j] = this->matrix[j][i];
         }
     }
     return m;
 }
 
-double Matrix::determinat(){
-    if(this->cnt_columns != this->cnt_rows)
+double Matrix::determinat()
+{
+    if (this->cnt_columns != this->cnt_rows)
         throw invalid_argument("matrix must be square");
-    
-    if(this->cnt_columns == 2){
+
+    if (this->cnt_columns == 2)
+    {
         return this->matrix[0][0] * this->matrix[1][1] - this->matrix[1][0] * this->matrix[0][1];
     }
 
     double det = 0;
 
-    for(int col = 0, one = 1; col < this->cnt_columns; ++col){
+    for (int col = 0, one = 1; col < this->cnt_columns; ++col)
+    {
         Matrix m = Matrix(this->cnt_rows - 1, this->cnt_columns - 1);
 
-        for(int i = 1, new_i = 0; i < this->cnt_rows; ++i){
-            for(int j = 0, new_j = 0; j < this->cnt_columns; ++j){
-                if(j == col){
+        for (int i = 1, new_i = 0; i < this->cnt_rows; ++i)
+        {
+            for (int j = 0, new_j = 0; j < this->cnt_columns; ++j)
+            {
+                if (j == col)
+                {
                     continue;
                 }
                 m.matrix[new_i][new_j] = this->matrix[i][j];
@@ -345,15 +362,42 @@ double Matrix::determinat(){
     return det;
 }
 
-Matrix Matrix::inverse(){
-    // double det = this->determinat();
+Matrix Matrix::inverse()
+{
+    double det = this->determinat();
 
-    // if(det < 1e-7)
-    //     throw invalid_argument("determinat is 0, invers matrix dont exist");
+    if (det < 1e-7)
+        throw invalid_argument("determinat is 0, invers matrix dont exist");
 
-    // det = 1.0 / det;
+    det = 1.0 / det;
 
-    // Matrix m = this->transpouse();
+    Matrix m_t = this->transpouse();
+    Matrix m = Matrix(this->cnt_rows, this->cnt_columns);
 
-    // return m * det;
+    for (int i = 0; i < m.cnt_rows; ++i)
+    {
+        for (int j = 0; j < m.cnt_columns; ++j)
+        {
+
+            Matrix addtion_mtx = Matrix(m_t.cnt_rows - 1, m_t.cnt_columns - 1);
+            for (int row = 0, new_row = 0; row < m_t.cnt_rows; ++row)
+            {
+                if (row == i)
+                    continue;
+                for (int col = 0, new_col = 0; col < m_t.cnt_columns; ++col)
+                {
+                    if (col == j)
+                        continue;
+                    addtion_mtx.matrix[new_row][new_col] = this->matrix[row][col];
+                    new_col++;
+                }
+                new_row++;
+            }
+
+            m.matrix[i][j] = pow(-1, i + j) * addtion_mtx.determinat();
+            cout << m.matrix[i][j] << " ";
+        }
+    }
+
+    return m.transpouse() * det;
 }

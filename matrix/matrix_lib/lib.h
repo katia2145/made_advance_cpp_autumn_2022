@@ -1,15 +1,13 @@
 #include <stdexcept>
 using namespace std;
 
+#include <bits/stdc++.h>
+
 #ifndef LIB_VECTOR_H
 #define LIB_VECTOR_H
 
 class Custom_vector;
 class Matrix;
-
-inline Matrix operator*(double num, Matrix mtx);
-
-inline Matrix operator*(Matrix mtx, double num);
 
 class Custom_vector
 {
@@ -77,7 +75,6 @@ private:
     double *get_row_column(int i, int cnt);
 };
 
-
 class Matrix : public Custom_vector
 {
 public:
@@ -85,6 +82,7 @@ public:
 
     Matrix(int cnt_rows = 2, int cnt_columns = 2)
     {
+        // cout << "1111111111\n";
         if (cnt_columns < 1 || cnt_rows < 1)
         {
             throw invalid_argument("size must be > 0");
@@ -199,6 +197,5 @@ public:
 
     Matrix inverse();
 };
-
 
 #endif

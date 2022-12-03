@@ -5,10 +5,10 @@ extern "C++"
 #include "../matrix_lib/lib.h"
 }
 
-// TEST(MATRIX, TestInvalidArgument){
-//     Matrix<3, 5> m;
-//     EXPECT_EQ(m.cnt_columns, 5);
-//     EXPECT_EQ(m.cnt_rows, 3);
+// TEST(MATRIX, Test1){
+//     Matrix<10, 10> m;
+//     // EXPECT_EQ(m.cnt_columns, 5);
+//     // EXPECT_EQ(m.cnt_rows, 3);
 // }
 
 TEST(MATRIX, TestInvalidArgument)

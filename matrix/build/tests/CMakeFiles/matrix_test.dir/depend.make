@@ -8,6 +8,7 @@ tests/CMakeFiles/matrix_test.dir/test_matrix.cpp.o: ../tests/test_get_diagonal.h
 tests/CMakeFiles/matrix_test.dir/test_matrix.cpp.o: ../tests/test_get_row.h
 tests/CMakeFiles/matrix_test.dir/test_matrix.cpp.o: ../tests/test_inicialization.h
 tests/CMakeFiles/matrix_test.dir/test_matrix.cpp.o: ../tests/test_invalid_argument.h
+tests/CMakeFiles/matrix_test.dir/test_matrix.cpp.o: ../tests/test_inverse.h
 tests/CMakeFiles/matrix_test.dir/test_matrix.cpp.o: ../tests/test_matrix.cpp
 tests/CMakeFiles/matrix_test.dir/test_matrix.cpp.o: ../tests/test_minus.h
 tests/CMakeFiles/matrix_test.dir/test_matrix.cpp.o: ../tests/test_multiply.h
