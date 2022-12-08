@@ -1,9 +1,0 @@
-/usr/made/made_advance_cpp_autumn_2022/matrix/build/CMakeFiles/rebuild_cache.dir
-/usr/made/made_advance_cpp_autumn_2022/matrix/build/CMakeFiles/edit_cache.dir
-/usr/made/made_advance_cpp_autumn_2022/matrix/build/CMakeFiles/matrix.dir
-/usr/made/made_advance_cpp_autumn_2022/matrix/build/matrix_lib/CMakeFiles/rebuild_cache.dir
-/usr/made/made_advance_cpp_autumn_2022/matrix/build/matrix_lib/CMakeFiles/edit_cache.dir
-/usr/made/made_advance_cpp_autumn_2022/matrix/build/matrix_lib/CMakeFiles/matrix_lib.dir
-/usr/made/made_advance_cpp_autumn_2022/matrix/build/tests/CMakeFiles/rebuild_cache.dir
-/usr/made/made_advance_cpp_autumn_2022/matrix/build/tests/CMakeFiles/edit_cache.dir
-/usr/made/made_advance_cpp_autumn_2022/matrix/build/tests/CMakeFiles/matrix_test.dir

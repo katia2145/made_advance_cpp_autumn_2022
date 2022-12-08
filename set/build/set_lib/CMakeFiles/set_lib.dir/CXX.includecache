@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/usr/made/made_advance_cpp_autumn_2022/set/set_lib/AVLTree.cpp
+iostream
+-
+lib.h
+/usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h
+
+/usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h
+stdexcept
+-
+bits/stdc++.h
+-
+

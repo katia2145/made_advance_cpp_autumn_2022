@@ -1,0 +1,2 @@
+/usr/bin/ar qc libset_lib.a CMakeFiles/set_lib.dir/AVLTree.cpp.o
+/usr/bin/ranlib libset_lib.a
