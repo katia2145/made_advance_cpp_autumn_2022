@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/usr/made/made_advance_cpp_autumn_2022/set/set_lib
 
 CXX_FLAGS = 
 

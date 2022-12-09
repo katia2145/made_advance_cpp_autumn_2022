@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/custom_set.dir/main.cpp.o -o custom_set  set_lib/libset_lib.a 

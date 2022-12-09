@@ -130,17 +130,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named set
+# Target rules for targets named custom_set
 
 # Build rule for target.
-set: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 set
-.PHONY : set
+custom_set: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 custom_set
+.PHONY : custom_set
 
 # fast build rule for target.
-set/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/build
-.PHONY : set/fast
+custom_set/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_set.dir/build.make CMakeFiles/custom_set.dir/build
+.PHONY : custom_set/fast
 
 #=============================================================================
 # Target rules for targets named set_lib
@@ -174,7 +174,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_set.dir/build.make CMakeFiles/custom_set.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -183,7 +183,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_set.dir/build.make CMakeFiles/custom_set.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -192,7 +192,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/set.dir/build.make CMakeFiles/set.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/custom_set.dir/build.make CMakeFiles/custom_set.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -203,7 +203,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... set"
+	@echo "... custom_set"
 	@echo "... set_lib"
 	@echo "... set_test"
 	@echo "... main.o"

@@ -4,16 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/usr/made/made_advance_cpp_autumn_2022/set/main.cpp" "/usr/made/made_advance_cpp_autumn_2022/set/build/CMakeFiles/set.dir/main.cpp.o"
+  "/usr/made/made_advance_cpp_autumn_2022/set/main.cpp" "/usr/made/made_advance_cpp_autumn_2022/set/build/CMakeFiles/custom_set.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../set_lib"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/usr/made/made_advance_cpp_autumn_2022/set/build/set_lib/CMakeFiles/set_lib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

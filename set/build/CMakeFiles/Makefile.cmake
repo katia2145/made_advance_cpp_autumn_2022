@@ -130,7 +130,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/set.dir/DependInfo.cmake"
+  "CMakeFiles/custom_set.dir/DependInfo.cmake"
   "set_lib/CMakeFiles/set_lib.dir/DependInfo.cmake"
   "tests/CMakeFiles/set_test.dir/DependInfo.cmake"
   )

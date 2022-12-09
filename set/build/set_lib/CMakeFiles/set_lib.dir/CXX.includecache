@@ -11,6 +11,8 @@ iostream
 -
 lib.h
 /usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h
+bits/stdc++.h
+-
 
 /usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h
 stdexcept

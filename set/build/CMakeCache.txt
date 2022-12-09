@@ -145,7 +145,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=set
+CMAKE_PROJECT_NAME:STATIC=custom_set
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -225,10 +225,10 @@ GTEST_MAIN_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libgtest_main.a
 GTEST_MAIN_LIBRARY_DEBUG:FILEPATH=GTEST_MAIN_LIBRARY_DEBUG-NOTFOUND
 
 //Value Computed by CMake
-set_BINARY_DIR:STATIC=/usr/made/made_advance_cpp_autumn_2022/set/build
+custom_set_BINARY_DIR:STATIC=/usr/made/made_advance_cpp_autumn_2022/set/build
 
 //Value Computed by CMake
-set_SOURCE_DIR:STATIC=/usr/made/made_advance_cpp_autumn_2022/set
+custom_set_SOURCE_DIR:STATIC=/usr/made/made_advance_cpp_autumn_2022/set
 
 //Value Computed by CMake
 set_lib_BINARY_DIR:STATIC=/usr/made/made_advance_cpp_autumn_2022/set/build/set_lib
