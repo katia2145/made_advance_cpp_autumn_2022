@@ -14,8 +14,24 @@ lib.h
 bits/stdc++.h
 -
 
+/usr/made/made_advance_cpp_autumn_2022/set/set_lib/find.cpp
+iostream
+-
+lib.h
+/usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h
+bits/stdc++.h
+-
+
+/usr/made/made_advance_cpp_autumn_2022/set/set_lib/insert.cpp
+iostream
+-
+lib.h
+/usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h
+
 /usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h
 stdexcept
+-
+iterator
 -
 bits/stdc++.h
 -

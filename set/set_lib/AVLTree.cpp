@@ -5,150 +5,79 @@
 using namespace std;
 
 template <class T>
-AVLTree<T>::AVLTree()
+Set<T>::Set()
 {
-    this->root = nullptr;
+    this->root = NULL;
     this->count = 0;
 }
 
-// typename AVLTree<T>::AVLTree* AVLTree<T>::operator=(AVLTree<T>::AVLTree* tree)
-// {
-//     // this->
-//     return *this;
-// }
-
 template <class T>
-void AVLTree<T>::insert(T x)
-{   
-    cout << "insert" << endl;
-    this->count += 1;
-    cout << this->count << endl;
-    insert(x, this->root);
-    // AVLTree<T>::node * new_root = insert(x, this->root);
-    // this->root = new_root;
-    // cout << "insert " << this->root->value << endl;
-}
-
-template <class T>
-int AVLTree<T>::height(AVLTree<T>::node *vertex)
+Set<T>::Set(std::initializer_list<T> lst)
 {
-    return (vertex == NULL ? -1 : vertex->height);
-}
-
-template <class T>
-typename AVLTree<T>::node *AVLTree<T>::insert(T value, AVLTree<T>::node *vertex)
-{
-    cout << "cur vertex " << vertex->value << endl;
-    if (vertex == nullptr)
+    this->root = NULL;
+    this->count = 0;
+    for (auto elm : lst)
     {
-        cout << "new node" << endl;
-        vertex = new node;
-        vertex->value = value;
-        vertex->count = 1;
-        vertex->height = 0;
-        vertex->left = nullptr;
-        vertex->right = nullptr;
-        return vertex;
+        this->insert(elm);
     }
-
-    if (value == vertex->value)
-    {
-        cout << "equal" << endl;
-        vertex->count += 1;
-        return vertex;
-    }
-
-    if (value < vertex->value)
-    {
-        cout << "<" << endl;
-        vertex->left = insert(value, vertex->left);
-        if (height(vertex->left) - height(vertex->right) == 2)
-        {
-            if (value < vertex->left->value)
-                vertex = smallRightRotate(vertex);
-            else
-                vertex = bigRightRotate(vertex);
-        }
-    }
-    else
-    {
-        cout << ">" << endl;
-        vertex->right = insert(value, vertex->right);
-        if (height(vertex->right) - height(vertex->left) == 2)
-        {
-            if (value < vertex->right->value)
-                vertex = bigRightRotate(vertex);
-            else
-                vertex = smallRightRotate(vertex);
-        }
-    }
-
-    cout << "get_height" << endl;
-    vertex->height = max(height(vertex->left), height(vertex->right)) + 1;
-    cout << vertex->height << endl;
-
-    cout << "return" << endl;
-    return vertex;
 }
 
 template <class T>
-typename AVLTree<T>::node *AVLTree<T>::smallRightRotate(AVLTree<T>::node *vertex)
+Set<T>::Set(const Set &copy)
 {
-    node *v_left = vertex->left;
-    vertex->left = v_left->right;
-    v_left->right = vertex;
-    v_left->height = max(height(v_left->left), vertex->height) + 1;
-    vertex->height = max(height(vertex->left), height(vertex->right)) + 1;
-
-    return v_left;
+    cout << "copy\n";
+    this->root = copy.root;
 }
 
 template <class T>
-typename AVLTree<T>::node *AVLTree<T>::smallLeftRotate(AVLTree<T>::node *vertex)
+typename Set<T>::Set &Set<T>::operator=(const Set &tree)
 {
-    node *v_left = vertex->right;
-    vertex->right = v_left->left;
-    v_left->left = vertex;
-    v_left->height = max(height(v_left->right), vertex->height) + 1;
-    vertex->height = max(height(vertex->left), height(vertex->right)) + 1;
-
-    return v_left;
+    cout << "=\n";
+    this->root = tree.root;
+    return *this;
 }
 
 template <class T>
-typename AVLTree<T>::node *AVLTree<T>::bigRightRotate(AVLTree<T>::node *vertex)
+int Set<T>::size() const
 {
-    vertex->left = smallLeftRotate(vertex->left);
-    vertex = smallRightRotate(vertex);
-    return vertex;
+    return this->count;
 }
 
 template <class T>
-typename AVLTree<T>::node *AVLTree<T>::bigLeftRotate(AVLTree<T>::node *vertex)
+bool Set<T>::empty() const
 {
-    vertex->right = smallRightRotate(vertex->right);
-    vertex = smallLeftRotate(vertex);
-    return vertex;
+    if (this->root == NULL)
+        return true;
+    return false;
 }
 
 template <class T>
-void AVLTree<T>::erase(T x)
+int Set<T>::height(Set<T>::node *vertex)
 {
-    // erase(x, this->root);
+    if (vertex == NULL)
+        return -1;
+    return vertex->height;
 }
+
 
 // template <class T>
-// typename AVLTree<T>::node* erase(T value, typename AVLTree<T>::node* vertex)
+// void Set<T>::erase(T x)
 // {
-//     if(vertex == nullptr)
-//         return nullptr;
+//     erase(x, this->root);
+// }
 
-//     AVLTree<T>::node* tmp;
+// template <class T>
+// typename Set<T>::node* erase(T value, typename Set<T>::node* vertex)
+// {
+//     if(vertex == NULL)
+//         return NULL;
+
+//     Set<T>::node* tmp;
 
 //     if(value < vertex->value)
-//         vertex->left = remove(value, vertex->left);
+//         vertex->left = erase(value, vertex->left);
 //     else if(value < vertex->value)
-//         vertex->right = remove(value, vertex->right);
+//         vertex->right = erase(value, vertex->right);
 
 //     // Element found
 //     // With 2 children
@@ -156,7 +85,7 @@ void AVLTree<T>::erase(T x)
 //     {
 //         tmp = findMin(vertex->right);
 //         vertex->value = tmp->value;
-//         vertex->right = remove(vertex->value, vertex->right);
+//         vertex->right = erase(tmp->value, vertex->right);
 //     }
 //     // With one or zero child
 //     else
@@ -168,7 +97,7 @@ void AVLTree<T>::erase(T x)
 //             vertex = vertex->left;
 //         delete tmp;
 //     }
-//     if(vertex == nullptr)
+//     if(vertex == NULL)
 //         return vertex;
 
 //     vertex->height = max(height(vertex->left), height(vertex->right)) + 1;

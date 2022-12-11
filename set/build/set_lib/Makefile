@@ -144,6 +144,33 @@ set_lib/fast:
 	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/build
 .PHONY : set_lib/fast
 
+1.o: 1.cpp.o
+
+.PHONY : 1.o
+
+# target to build an object file
+1.cpp.o:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/1.cpp.o
+.PHONY : 1.cpp.o
+
+1.i: 1.cpp.i
+
+.PHONY : 1.i
+
+# target to preprocess a source file
+1.cpp.i:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/1.cpp.i
+.PHONY : 1.cpp.i
+
+1.s: 1.cpp.s
+
+.PHONY : 1.s
+
+# target to generate assembly for a file
+1.cpp.s:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/1.cpp.s
+.PHONY : 1.cpp.s
+
 AVLTree.o: AVLTree.cpp.o
 
 .PHONY : AVLTree.o
@@ -171,6 +198,60 @@ AVLTree.cpp.s:
 	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/AVLTree.cpp.s
 .PHONY : AVLTree.cpp.s
 
+find.o: find.cpp.o
+
+.PHONY : find.o
+
+# target to build an object file
+find.cpp.o:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/find.cpp.o
+.PHONY : find.cpp.o
+
+find.i: find.cpp.i
+
+.PHONY : find.i
+
+# target to preprocess a source file
+find.cpp.i:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/find.cpp.i
+.PHONY : find.cpp.i
+
+find.s: find.cpp.s
+
+.PHONY : find.s
+
+# target to generate assembly for a file
+find.cpp.s:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/find.cpp.s
+.PHONY : find.cpp.s
+
+insert.o: insert.cpp.o
+
+.PHONY : insert.o
+
+# target to build an object file
+insert.cpp.o:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/insert.cpp.o
+.PHONY : insert.cpp.o
+
+insert.i: insert.cpp.i
+
+.PHONY : insert.i
+
+# target to preprocess a source file
+insert.cpp.i:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/insert.cpp.i
+.PHONY : insert.cpp.i
+
+insert.s: insert.cpp.s
+
+.PHONY : insert.s
+
+# target to generate assembly for a file
+insert.cpp.s:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/insert.cpp.s
+.PHONY : insert.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -180,9 +261,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... set_lib"
+	@echo "... 1.o"
+	@echo "... 1.i"
+	@echo "... 1.s"
 	@echo "... AVLTree.o"
 	@echo "... AVLTree.i"
 	@echo "... AVLTree.s"
+	@echo "... find.o"
+	@echo "... find.i"
+	@echo "... find.s"
+	@echo "... insert.o"
+	@echo "... insert.i"
+	@echo "... insert.s"
 .PHONY : help
 
 

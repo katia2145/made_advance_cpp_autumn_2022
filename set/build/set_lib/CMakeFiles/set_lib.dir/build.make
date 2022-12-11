@@ -76,9 +76,22 @@ include set_lib/CMakeFiles/set_lib.dir/progress.make
 # Include the compile flags for this target's objects.
 include set_lib/CMakeFiles/set_lib.dir/flags.make
 
+set_lib/CMakeFiles/set_lib.dir/1.cpp.o: set_lib/CMakeFiles/set_lib.dir/flags.make
+set_lib/CMakeFiles/set_lib.dir/1.cpp.o: ../set_lib/1.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/made/made_advance_cpp_autumn_2022/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object set_lib/CMakeFiles/set_lib.dir/1.cpp.o"
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build/set_lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/set_lib.dir/1.cpp.o -c /usr/made/made_advance_cpp_autumn_2022/set/set_lib/1.cpp
+
+set_lib/CMakeFiles/set_lib.dir/1.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/set_lib.dir/1.cpp.i"
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build/set_lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/made/made_advance_cpp_autumn_2022/set/set_lib/1.cpp > CMakeFiles/set_lib.dir/1.cpp.i
+
+set_lib/CMakeFiles/set_lib.dir/1.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/set_lib.dir/1.cpp.s"
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build/set_lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/made/made_advance_cpp_autumn_2022/set/set_lib/1.cpp -o CMakeFiles/set_lib.dir/1.cpp.s
+
 set_lib/CMakeFiles/set_lib.dir/AVLTree.cpp.o: set_lib/CMakeFiles/set_lib.dir/flags.make
 set_lib/CMakeFiles/set_lib.dir/AVLTree.cpp.o: ../set_lib/AVLTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/made/made_advance_cpp_autumn_2022/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object set_lib/CMakeFiles/set_lib.dir/AVLTree.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/made/made_advance_cpp_autumn_2022/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object set_lib/CMakeFiles/set_lib.dir/AVLTree.cpp.o"
 	cd /usr/made/made_advance_cpp_autumn_2022/set/build/set_lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/set_lib.dir/AVLTree.cpp.o -c /usr/made/made_advance_cpp_autumn_2022/set/set_lib/AVLTree.cpp
 
 set_lib/CMakeFiles/set_lib.dir/AVLTree.cpp.i: cmake_force
@@ -89,17 +102,49 @@ set_lib/CMakeFiles/set_lib.dir/AVLTree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/set_lib.dir/AVLTree.cpp.s"
 	cd /usr/made/made_advance_cpp_autumn_2022/set/build/set_lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/made/made_advance_cpp_autumn_2022/set/set_lib/AVLTree.cpp -o CMakeFiles/set_lib.dir/AVLTree.cpp.s
 
+set_lib/CMakeFiles/set_lib.dir/find.cpp.o: set_lib/CMakeFiles/set_lib.dir/flags.make
+set_lib/CMakeFiles/set_lib.dir/find.cpp.o: ../set_lib/find.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/made/made_advance_cpp_autumn_2022/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object set_lib/CMakeFiles/set_lib.dir/find.cpp.o"
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build/set_lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/set_lib.dir/find.cpp.o -c /usr/made/made_advance_cpp_autumn_2022/set/set_lib/find.cpp
+
+set_lib/CMakeFiles/set_lib.dir/find.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/set_lib.dir/find.cpp.i"
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build/set_lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/made/made_advance_cpp_autumn_2022/set/set_lib/find.cpp > CMakeFiles/set_lib.dir/find.cpp.i
+
+set_lib/CMakeFiles/set_lib.dir/find.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/set_lib.dir/find.cpp.s"
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build/set_lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/made/made_advance_cpp_autumn_2022/set/set_lib/find.cpp -o CMakeFiles/set_lib.dir/find.cpp.s
+
+set_lib/CMakeFiles/set_lib.dir/insert.cpp.o: set_lib/CMakeFiles/set_lib.dir/flags.make
+set_lib/CMakeFiles/set_lib.dir/insert.cpp.o: ../set_lib/insert.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/usr/made/made_advance_cpp_autumn_2022/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object set_lib/CMakeFiles/set_lib.dir/insert.cpp.o"
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build/set_lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/set_lib.dir/insert.cpp.o -c /usr/made/made_advance_cpp_autumn_2022/set/set_lib/insert.cpp
+
+set_lib/CMakeFiles/set_lib.dir/insert.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/set_lib.dir/insert.cpp.i"
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build/set_lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/made/made_advance_cpp_autumn_2022/set/set_lib/insert.cpp > CMakeFiles/set_lib.dir/insert.cpp.i
+
+set_lib/CMakeFiles/set_lib.dir/insert.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/set_lib.dir/insert.cpp.s"
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build/set_lib && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/made/made_advance_cpp_autumn_2022/set/set_lib/insert.cpp -o CMakeFiles/set_lib.dir/insert.cpp.s
+
 # Object files for target set_lib
 set_lib_OBJECTS = \
-"CMakeFiles/set_lib.dir/AVLTree.cpp.o"
+"CMakeFiles/set_lib.dir/1.cpp.o" \
+"CMakeFiles/set_lib.dir/AVLTree.cpp.o" \
+"CMakeFiles/set_lib.dir/find.cpp.o" \
+"CMakeFiles/set_lib.dir/insert.cpp.o"
 
 # External object files for target set_lib
 set_lib_EXTERNAL_OBJECTS =
 
+set_lib/libset_lib.a: set_lib/CMakeFiles/set_lib.dir/1.cpp.o
 set_lib/libset_lib.a: set_lib/CMakeFiles/set_lib.dir/AVLTree.cpp.o
+set_lib/libset_lib.a: set_lib/CMakeFiles/set_lib.dir/find.cpp.o
+set_lib/libset_lib.a: set_lib/CMakeFiles/set_lib.dir/insert.cpp.o
 set_lib/libset_lib.a: set_lib/CMakeFiles/set_lib.dir/build.make
 set_lib/libset_lib.a: set_lib/CMakeFiles/set_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/usr/made/made_advance_cpp_autumn_2022/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libset_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/usr/made/made_advance_cpp_autumn_2022/set/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libset_lib.a"
 	cd /usr/made/made_advance_cpp_autumn_2022/set/build/set_lib && $(CMAKE_COMMAND) -P CMakeFiles/set_lib.dir/cmake_clean_target.cmake
 	cd /usr/made/made_advance_cpp_autumn_2022/set/build/set_lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/set_lib.dir/link.txt --verbose=$(VERBOSE)
 

@@ -9,11 +9,21 @@
 /usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h
 stdexcept
 -
+iterator
+-
 bits/stdc++.h
 -
 
 /usr/made/made_advance_cpp_autumn_2022/set/tests/test_matrix.cpp
 gtest/gtest.h
+-
+cstdlib
+-
+iostream
+-
+set
+-
+string
 -
 ../set_lib/lib.h
 /usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h

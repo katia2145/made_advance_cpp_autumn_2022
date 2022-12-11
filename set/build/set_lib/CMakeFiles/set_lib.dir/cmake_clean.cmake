@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/set_lib.dir/1.cpp.o"
   "CMakeFiles/set_lib.dir/AVLTree.cpp.o"
+  "CMakeFiles/set_lib.dir/find.cpp.o"
+  "CMakeFiles/set_lib.dir/insert.cpp.o"
   "libset_lib.a"
   "libset_lib.pdb"
 )
