@@ -1,0 +1,9 @@
+/usr/made/made_advance_cpp_autumn_2022/set/build/CMakeFiles/rebuild_cache.dir
+/usr/made/made_advance_cpp_autumn_2022/set/build/CMakeFiles/edit_cache.dir
+/usr/made/made_advance_cpp_autumn_2022/set/build/CMakeFiles/custom_set.dir
+/usr/made/made_advance_cpp_autumn_2022/set/build/set_lib/CMakeFiles/rebuild_cache.dir
+/usr/made/made_advance_cpp_autumn_2022/set/build/set_lib/CMakeFiles/edit_cache.dir
+/usr/made/made_advance_cpp_autumn_2022/set/build/set_lib/CMakeFiles/set_lib.dir
+/usr/made/made_advance_cpp_autumn_2022/set/build/tests/CMakeFiles/rebuild_cache.dir
+/usr/made/made_advance_cpp_autumn_2022/set/build/tests/CMakeFiles/edit_cache.dir
+/usr/made/made_advance_cpp_autumn_2022/set/build/tests/CMakeFiles/set_test.dir

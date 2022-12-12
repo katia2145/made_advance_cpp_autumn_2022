@@ -1,0 +1,2 @@
+/usr/bin/ar qc libset_lib.a CMakeFiles/set_lib.dir/erase.cpp.o CMakeFiles/set_lib.dir/iterator.cpp.o
+/usr/bin/ranlib libset_lib.a

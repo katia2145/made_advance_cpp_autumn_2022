@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/usr/made/made_advance_cpp_autumn_2022/set/set_lib/erase.cpp
+iostream
+-
+lib.h
+/usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h
+bits/stdc++.h
+-
+
+/usr/made/made_advance_cpp_autumn_2022/set/set_lib/iterator.cpp
+iostream
+-
+lib.h
+/usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h
+bits/stdc++.h
+-
+
+/usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h
+stdexcept
+-
+iterator
+-
+bits/stdc++.h
+-
+
