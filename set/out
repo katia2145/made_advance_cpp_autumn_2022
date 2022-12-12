@@ -1,0 +1,79 @@
+check empty set handling... 
+initializer
+insert ok 
+initializer 1
+copy 0
+ok copy
+ok!
+
+check operator <... initializer
+insert ok 
+insert ok 
+insert ok 
+insert ok 
+insert ok 
+insert ok 
+insert ok 
+initializer 7
+ok!
+check iterators... 
+initializer
+insert ok 
+insert ok 
+insert ok 
+insert ok 
+insert ok 
+insert ok 
+initializer 6
+initializer
+insert ok 
+initializer 1
+ok!
+check copy... 
+copy 10
+-5
+ok insert
+-1
+ok insert
+0
+ok insert
+2
+ok insert
+3
+ok insert
+4
+ok insert
+6
+ok insert
+17
+ok insert
+ok copy
+ok!
+check destructor... 
+initializer
+insert ok 
+insert ok 
+insert ok 
+insert ok 
+insert ok 
+insert ok 
+initializer 6
+initializer
+insert ok 
+insert ok 
+insert ok 
+insert ok 
+insert ok 
+insert ok 
+initializer 6
+1 
+copy 6
+1
+ok insert
+ok copy
+copy 2
+0
+ok insert
+1
+ok insert
+ok copy

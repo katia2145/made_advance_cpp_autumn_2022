@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/usr/made/made_advance_cpp_autumn_2022/set/set_lib/AVLTree.cpp
+/usr/made/made_advance_cpp_autumn_2022/set/set_lib/erase.cpp
 iostream
 -
 lib.h
@@ -14,19 +14,13 @@ lib.h
 bits/stdc++.h
 -
 
-/usr/made/made_advance_cpp_autumn_2022/set/set_lib/find.cpp
+/usr/made/made_advance_cpp_autumn_2022/set/set_lib/iterator.cpp
 iostream
 -
 lib.h
 /usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h
 bits/stdc++.h
 -
-
-/usr/made/made_advance_cpp_autumn_2022/set/set_lib/insert.cpp
-iostream
--
-lib.h
-/usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h
 
 /usr/made/made_advance_cpp_autumn_2022/set/set_lib/lib.h
 stdexcept

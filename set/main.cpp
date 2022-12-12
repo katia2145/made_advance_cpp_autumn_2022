@@ -42,16 +42,16 @@ int main()
 
     cout << "for" << endl;
 
-    Set<int>::Iterator it = t.begin();
-    Set<int>::Iterator it_end = t.end();
+    Set<int>::iterator it = t.begin();
+    Set<int>::iterator it_end = t.end();
 
-    Set<int>::Iterator it_5 = t.find(5);
+    Set<int>::iterator it_5 = t.find(5);
     std::cout << "find: " << *it_5 << "\n";
 
-    Set<int>::Iterator it_55 = t.lower_bound(4);
+    Set<int>::iterator it_55 = t.lower_bound(4);
     std::cout << "lower_bound 4" << *it_55 << "\n";
 
-    Set<int>::Iterator it_10 = t.lower_bound(6);
+    Set<int>::iterator it_10 = t.lower_bound(6);
     std::cout << "lower_bound 6" << *it_10 << "\n";
 
     std::cout << "First value: " << *it << "\n";

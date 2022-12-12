@@ -144,113 +144,59 @@ set_lib/fast:
 	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/build
 .PHONY : set_lib/fast
 
-1.o: 1.cpp.o
+erase.o: erase.cpp.o
 
-.PHONY : 1.o
-
-# target to build an object file
-1.cpp.o:
-	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/1.cpp.o
-.PHONY : 1.cpp.o
-
-1.i: 1.cpp.i
-
-.PHONY : 1.i
-
-# target to preprocess a source file
-1.cpp.i:
-	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/1.cpp.i
-.PHONY : 1.cpp.i
-
-1.s: 1.cpp.s
-
-.PHONY : 1.s
-
-# target to generate assembly for a file
-1.cpp.s:
-	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/1.cpp.s
-.PHONY : 1.cpp.s
-
-AVLTree.o: AVLTree.cpp.o
-
-.PHONY : AVLTree.o
+.PHONY : erase.o
 
 # target to build an object file
-AVLTree.cpp.o:
-	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/AVLTree.cpp.o
-.PHONY : AVLTree.cpp.o
+erase.cpp.o:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/erase.cpp.o
+.PHONY : erase.cpp.o
 
-AVLTree.i: AVLTree.cpp.i
+erase.i: erase.cpp.i
 
-.PHONY : AVLTree.i
+.PHONY : erase.i
 
 # target to preprocess a source file
-AVLTree.cpp.i:
-	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/AVLTree.cpp.i
-.PHONY : AVLTree.cpp.i
+erase.cpp.i:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/erase.cpp.i
+.PHONY : erase.cpp.i
 
-AVLTree.s: AVLTree.cpp.s
+erase.s: erase.cpp.s
 
-.PHONY : AVLTree.s
+.PHONY : erase.s
 
 # target to generate assembly for a file
-AVLTree.cpp.s:
-	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/AVLTree.cpp.s
-.PHONY : AVLTree.cpp.s
+erase.cpp.s:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/erase.cpp.s
+.PHONY : erase.cpp.s
 
-find.o: find.cpp.o
+iterator.o: iterator.cpp.o
 
-.PHONY : find.o
+.PHONY : iterator.o
 
 # target to build an object file
-find.cpp.o:
-	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/find.cpp.o
-.PHONY : find.cpp.o
+iterator.cpp.o:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/iterator.cpp.o
+.PHONY : iterator.cpp.o
 
-find.i: find.cpp.i
+iterator.i: iterator.cpp.i
 
-.PHONY : find.i
-
-# target to preprocess a source file
-find.cpp.i:
-	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/find.cpp.i
-.PHONY : find.cpp.i
-
-find.s: find.cpp.s
-
-.PHONY : find.s
-
-# target to generate assembly for a file
-find.cpp.s:
-	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/find.cpp.s
-.PHONY : find.cpp.s
-
-insert.o: insert.cpp.o
-
-.PHONY : insert.o
-
-# target to build an object file
-insert.cpp.o:
-	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/insert.cpp.o
-.PHONY : insert.cpp.o
-
-insert.i: insert.cpp.i
-
-.PHONY : insert.i
+.PHONY : iterator.i
 
 # target to preprocess a source file
-insert.cpp.i:
-	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/insert.cpp.i
-.PHONY : insert.cpp.i
+iterator.cpp.i:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/iterator.cpp.i
+.PHONY : iterator.cpp.i
 
-insert.s: insert.cpp.s
+iterator.s: iterator.cpp.s
 
-.PHONY : insert.s
+.PHONY : iterator.s
 
 # target to generate assembly for a file
-insert.cpp.s:
-	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/insert.cpp.s
-.PHONY : insert.cpp.s
+iterator.cpp.s:
+	cd /usr/made/made_advance_cpp_autumn_2022/set/build && $(MAKE) $(MAKESILENT) -f set_lib/CMakeFiles/set_lib.dir/build.make set_lib/CMakeFiles/set_lib.dir/iterator.cpp.s
+.PHONY : iterator.cpp.s
 
 # Help Target
 help:
@@ -261,18 +207,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... set_lib"
-	@echo "... 1.o"
-	@echo "... 1.i"
-	@echo "... 1.s"
-	@echo "... AVLTree.o"
-	@echo "... AVLTree.i"
-	@echo "... AVLTree.s"
-	@echo "... find.o"
-	@echo "... find.i"
-	@echo "... find.s"
-	@echo "... insert.o"
-	@echo "... insert.i"
-	@echo "... insert.s"
+	@echo "... erase.o"
+	@echo "... erase.i"
+	@echo "... erase.s"
+	@echo "... iterator.o"
+	@echo "... iterator.i"
+	@echo "... iterator.s"
 .PHONY : help
 
 

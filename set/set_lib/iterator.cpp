@@ -5,7 +5,7 @@
 using namespace std;
 
 // template <class T>
-// typename Set<T>::Iterator &Set<T>::Iterator::operator++()
+// typename Set<T>::iterator &Set<T>::iterator::operator++()
 // {
 //     ++current;
 //     return *this;
